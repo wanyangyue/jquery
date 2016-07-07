@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<meta Http-equiv = "Content-type" Content = "text/html ; charset = utf-8">
+	
+	<style type="text/css" media="screen">
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ul {
+		float :left;
+	    border-top: 2px solid #206F96;
+		margin-left: 200px;
+		list-style: none;
+	}
+	ul li {
+		float: left;
+		border-left: 1px solid #CFCFCF;
+		border-bottom: 1px solid #CFCFCF;
+		padding: 6px 34px;
+		background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(237, 237, 237));
+	}
+	ul li:last-child {
+		border-right: 1px solid #CFCFCF;
+	}
+	ul li.hover {
+		background: none;
+		border-bottom: 1px solid #fff;
+	}
+	
+	ul li:hover {
+		cursor: pointer;
+	}
+	
+	#info {
+		margin-left: 200px;
+		height: 200px;
+		clear: both;
+		float: left;
+		width: 302px;
+		border: 1px solid #CFCFCF;
+		border-top: none;
+	}
+	#info div{
+		display: none;
+	}
+	
+	#info div.active {
+		display: block;
+	}
+	</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li class="hover">娱乐</li>
+				<li>电影</li>
+				<li>音乐</li>
+			</ul>
+		</div>
+		
+		<div id="info">
+			<div class="active">
+				娱乐新闻
+			</div>
+			<div>
+				电影新闻
+			</div>
+			<div>
+				音乐新闻
+			</div>
+		</div>
+
+		<script src="assets/js/jquery-2.2.2.min.js"></script>
+		<script type="text/javascript">
+		
+
+		$(function(){
+			
+			$("ul li").mouseenter(function(){
+				
+				$(this).addClass("hover").siblings().removeClass() ;
+
+				var index = $(this).index() ;
+
+				$("#info div").eq(index).addClass("active").siblings().removeClass("active") ;
+
+
+			}) ;
+		
+		
+		}) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*		$(function(){
+
+				$("ul li").mouseenter(function(){
+					$(this).addClass("hover").siblings().removeClass("hover");
+					var index = $(this).index();		//取得索引
+					// alert(index);
+					$("#info div").eq(index).addClass("active").siblings().removeClass("active")
+				})
+			})
+
+*/
+		
+		</script>
+	</body>
+</html>
